@@ -36,7 +36,7 @@ const App = () => {
       try {
         setIsLoading(true);
         setIsError(false);
-        const response = await fetchPhotos(query, page);
+        const response = await fetchPhotos(query, page, 5);
         setResults((prev) => [...prev, ...response]);
         setTotal(response.total_pages);
       } catch (error) {
